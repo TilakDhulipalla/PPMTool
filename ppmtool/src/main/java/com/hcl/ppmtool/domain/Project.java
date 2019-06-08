@@ -13,6 +13,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.ser.impl.FailingSerializer;
 
 @Entity
 public class Project {
@@ -33,6 +34,7 @@ public class Project {
 	@JsonFormat(pattern="yyyy-mm-dd")
 	private Date end_date;
 	@JsonFormat(pattern="yyyy-mm-dd")
+	@Column(updatable=false)
 	private Date created_At;
 	@JsonFormat(pattern="yyyy-mm-dd")
 	private Date updated_At;
