@@ -86,7 +86,7 @@
 
         </dependency>
 
-        <!-- <dependency>
+         <dependency>
 
             <groupId>mysql</groupId>
 
@@ -94,7 +94,7 @@
 
             <scope>runtime</scope>
 
-        </dependency> -->
+        </dependency> 
 
         <dependency>
 
