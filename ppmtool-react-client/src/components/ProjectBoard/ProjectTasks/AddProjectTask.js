@@ -22,6 +22,7 @@ class AddProjectTask extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
@@ -49,10 +50,10 @@ class AddProjectTask extends Component {
       this.props.history
     );
   }
+
   render() {
     const { id } = this.props.match.params;
     const { errors } = this.state;
-
     return (
       <div className="add-PBI">
         <div className="container">
@@ -143,6 +144,7 @@ AddProjectTask.propTypes = {
   addProjectTask: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired
 };
+
 const mapStateToProps = state => ({
   errors: state.errors
 });

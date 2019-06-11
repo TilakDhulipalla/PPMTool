@@ -34,6 +34,7 @@ public class ProjectTaskService {
 		//exception not found
 		//project task for specific proj, not null, backlog(bl) exists
 		Backlog backlog=backlogRepository.findByProjectIdentifier(projectIdentifier);
+		 System.out.println(backlog);
 		//set the bl to pt
 		projectTask.setBacklog(backlog);
 		//proj sequence from proj identifier withiin proj

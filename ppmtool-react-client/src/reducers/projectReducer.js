@@ -18,6 +18,7 @@ export default function(state = initialState, action) {
         ...state,
         project: action.payload
       };
+
     case DELETE_PROJECT:
       return {
         ...state,

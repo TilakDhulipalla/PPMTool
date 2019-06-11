@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import classnames from "classnames";
 
 class UpdateProject extends Component {
+  //set state
   constructor() {
     super();
 
@@ -81,7 +82,7 @@ class UpdateProject extends Component {
                 <div className="form-group">
                   <input
                     type="text"
-                    className={classnames("form-control form-control-lg ", {
+                    className={classnames("form-control form-control-lg", {
                       "is-invalid": errors.projectName
                     })}
                     placeholder="Project Name"
@@ -90,9 +91,7 @@ class UpdateProject extends Component {
                     onChange={this.onChange}
                   />
                   {errors.projectName && (
-                    <div className="invalid-feedback">
-                      {errors.projectName}{" "}
-                    </div>
+                    <div className="invalid-feedback">{errors.projectName}</div>
                   )}
                 </div>
                 <div className="form-group">
@@ -108,7 +107,7 @@ class UpdateProject extends Component {
                 </div>
                 <div className="form-group">
                   <textarea
-                    className={classnames("form-control form-control-lg ", {
+                    className={classnames("form-control form-control-lg", {
                       "is-invalid": errors.description
                     })}
                     placeholder="Project Description"
@@ -117,9 +116,7 @@ class UpdateProject extends Component {
                     value={this.state.description}
                   />
                   {errors.description && (
-                    <div className="invalid-feedback">
-                      {errors.description}{" "}
-                    </div>
+                    <div className="invalid-feedback">{errors.description}</div>
                   )}
                 </div>
                 <h6>Start Date</h6>

@@ -8,6 +8,7 @@ class ProjectItem extends Component {
   onDeleteClick = id => {
     this.props.deleteProject(id);
   };
+
   render() {
     const { project } = this.props;
     return (
@@ -55,6 +56,7 @@ class ProjectItem extends Component {
 ProjectItem.propTypes = {
   deleteProject: PropTypes.func.isRequired
 };
+
 export default connect(
   null,
   { deleteProject }
