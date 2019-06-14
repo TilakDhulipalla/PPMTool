@@ -2,6 +2,7 @@
 package com.hcl.ppmtool.domain;
 
 import static org.assertj.core.api.Assertions.fail;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
@@ -36,6 +37,7 @@ public class ProjectTask {
 	private String acceptanceCriteria;
 	private String status;
 	private Integer priority;
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date dueDate;
 	//many to one with backlog
 	@ManyToOne(fetch=FetchType.EAGER)
@@ -46,7 +48,9 @@ public class ProjectTask {
 	@Column(updatable=false)
 	private String projectIdentifier;
 	
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date create_At;
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date update_At;
 	
 	
