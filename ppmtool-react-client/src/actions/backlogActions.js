@@ -75,6 +75,16 @@ export const updateProjectTask = (
     });
   }
 };
+export const updateProjectTaskCategory = (
+  backlog_id,
+  pt_id,
+  newstatus
+) => async dispatch => {
+  const res = await axios.get(`/api/backlog/${backlog_id}/${pt_id}`);
+  console.log("res.data.status ", res.data.status);
+  res.data.status = newstatus;
+  await axios.patch(`/api/backlog/${backlog_id}/${pt_id}`, res.data);
+};
 export const deleteProjectTask = (backlog_id, pt_id) => async dispatch => {
   if (
     window.confirm(

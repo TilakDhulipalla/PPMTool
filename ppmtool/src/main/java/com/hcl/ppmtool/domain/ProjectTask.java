@@ -1,12 +1,11 @@
 
 package com.hcl.ppmtool.domain;
 
-import static org.assertj.core.api.Assertions.fail;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
